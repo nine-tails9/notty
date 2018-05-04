@@ -15,6 +15,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/fileupload', function () {
+    return view('fileUpload');
+})->middleware('auth');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/sem', 'FileinfoController@index')->name('sem');
+
+Route::get('{file}', 'FilesController@down');
+
+Route::get('/sem/{id}', 'FileinfoController@subject')->name('subject');
+
+Route::get('/sem/{id}/{name}', 'FileinfoController@files')->name('files');
+
+
+Route::post('upload', 'FilesController@add');
+ 
