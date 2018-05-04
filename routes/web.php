@@ -21,10 +21,10 @@ Route::get('/fileupload', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 
 Route::get('/sem', 'FileinfoController@index')->name('sem');
+
+Route::get('/home', 'FileinfoController@index')->name('home');
 
 Route::get('{file}', 'FilesController@down');
 

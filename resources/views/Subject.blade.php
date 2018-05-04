@@ -5,7 +5,7 @@
 
 	<div class="container">
 	<div class="page-header">
-		<h1>Select Sem</h1>
+		<h1>Select Subject</h1>
 	</div>
 		
 		<div class="panel panel-default"  style="width: 40%;">
